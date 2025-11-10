@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "../Component/Hero";
+import Hero from "../component/Hero";
 import AboutSection from "../component/AboutSection";
 import FeaturesSection from "../component/FeaturesSection";
 import SmartFilingSection from "../component/SmartFilingSection";

@@ -2,6 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
+    
     <section className="mt-14 bg-[#144047] text-white px-6 sm:px-10 md:px-16 lg:px-32 xl:px-48 py-16 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
       {/* ===== LEFT CONTENT ===== */}
       <div className="max-w-2xl z-10 text-center md:text-left">
