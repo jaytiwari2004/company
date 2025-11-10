@@ -93,17 +93,7 @@ const FeaturesSection = () => {
       </div>
 
       {/* Floating WhatsApp Button */}
-      <a
-        href="#"
-        className="fixed bottom-8 right-8 flex items-center gap-2 bg-[#F7931E] text-white px-5 py-3 rounded-full shadow-lg hover:bg-[#ffa733] transition"
-      >
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-          alt="WhatsApp"
-          className="w-6 h-6 bg-white rounded-full p-1"
-        />
-        <span className="font-semibold">Talk to Tax Expert</span>
-      </a>
+     
     </section>
   );
 };

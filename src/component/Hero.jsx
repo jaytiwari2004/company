@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    
+
     <section className="mt-14 bg-[#144047] text-white px-6 sm:px-10 md:px-16 lg:px-32 xl:px-48 py-16 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
       {/* ===== LEFT CONTENT ===== */}
       <div className="max-w-2xl z-10 text-center md:text-left">
@@ -72,19 +72,7 @@ const Hero = () => {
       </div>
 
       {/* ===== FLOATING BUTTON ===== */}
-      <a
-        href="#"
-        className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 flex items-center gap-2 bg-[#F7931E] text-white px-4 sm:px-5 py-3 rounded-full shadow-lg hover:bg-[#ffa733] transition"
-      >
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-          alt="WhatsApp"
-          className="w-5 h-5 sm:w-6 sm:h-6 bg-white rounded-full p-1"
-        />
-        <span className="font-semibold text-sm sm:text-base">
-          Talk to Tax Expert
-        </span>
-      </a>
+      
     </section>
   );
 };
