@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="flex flex-col leading-tight">
           <h1 className="text-3xl font-bold">
             <Link to="/">
-              Com<span className="text-blue-400">pany</span>
+              Complia<span className="text-blue-400">ncebro</span>
             </Link>
           </h1>
           <p className="text-xs tracking-wider hidden md:block">
