@@ -2,11 +2,11 @@ import React from "react";
 
 const reviews = [
   {
-    name: "Niranjana Sharma",
+    name: "ayush sharma",
     image: "https://static.wixstatic.com/media/5ef7f2_1.png",
     role: "Local Guide • 2 months ago",
     review:
-      "Team TaxBuddy came to the rescue in crunch time. They were prompt, courteous and professional. Superlative service at a super competitive price. Couldn't be more satisfied. Strongly recommended for every taxpayer in India who wants accurate returns and peace of mind.",
+      "Team Compliancebro came to the rescue in crunch time. They were prompt, courteous and professional. Superlative service at a super competitive price. Couldn't be more satisfied. Strongly recommended for every taxpayer in India who wants accurate returns and peace of mind.",
     rating: "4.7",
   },
   {
@@ -30,7 +30,7 @@ const reviews = [
     image: "https://static.wixstatic.com/media/5ef7f2_4.png",
     role: "1 month ago",
     review:
-      "TaxBuddy was a breeze to work with. It's a straightforward procedure that's easy to follow. All you have to do is fill out the form with the relevant information and submit necessary documents as requested by them.",
+      "Compliancebro was a breeze to work with. It's a straightforward procedure that's easy to follow. All you have to do is fill out the form with the relevant information and submit necessary documents as requested by them.",
     rating: "4.9",
   },
   {
@@ -38,7 +38,7 @@ const reviews = [
     image: "https://static.wixstatic.com/media/5ef7f2_5.png",
     role: "1 month ago",
     review:
-      "TaxBuddy has been a real buddy for me throughout my e–filing process. As a high–income professional, I have always struggled with high tax bills and refund concerns. Thankfully, now I have a partner I can trust to guide me for maximum savings.",
+      "Compliancebro has been a real buddy for me throughout my e–filing process. As a high–income professional, I have always struggled with high tax bills and refund concerns. Thankfully, now I have a partner I can trust to guide me for maximum savings.",
     rating: "5.0",
   },
 ];

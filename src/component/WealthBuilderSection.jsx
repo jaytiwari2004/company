@@ -2,12 +2,12 @@ import React from "react";
 
 const WealthBuilderSection = () => {
   return (
-    <section className="bg-[#e9f5b8] flex flex-col lg:flex-row items-center justify-center gap-10 px-6 sm:px-10 md:px-20 lg:px-32 py-22">
+    <section className="bg-[#ffdf75] flex flex-col lg:flex-row items-center justify-center gap-10 px-6 sm:px-10 md:px-20 lg:px-32 py-22">
       {/* Left Image */}
       <div className="flex justify-center lg:justify-end w-full lg:w-1/2">
         <img
-          src="https://static.wixstatic.com/media/5ef7f2_cb9c60855c27456f8c9654295ea2869e~mv2.jpg/v1/fill/w_454,h_810,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Rajkumar-Rao4.jpg"
-          alt="TaxBuddy Wealth Builder"
+          src="56211.jpg"
+          alt="Compliancebro Wealth Builder"
           className="w-[220px] sm:w-[280px] md:w-[340px] lg:w-[380px] object-contain"
         />
       </div>
@@ -15,7 +15,7 @@ const WealthBuilderSection = () => {
       {/* Right Text */}
       <div className="text-center lg:text-left max-w-lg w-full lg:w-1/2">
         <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 text-[#000000] leading-tight">
-          TaxBuddy Wealth <br /> Builder
+          Compliance bro <br /> Builder
         </h1>
 
         <h2 className="text-base sm:text-lg font-medium mb-4 text-[#000000]">

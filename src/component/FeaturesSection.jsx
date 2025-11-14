@@ -5,13 +5,13 @@ const FeaturesSection = () => {
     <section className="bg-[#EFF8F8] text-[#0A4655] px-6 md:px-24 py-16 text-center">
       {/* === Heading === */}
       <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-snug">
-        TaxBuddy: Your AI-Driven Partner for Online Income Tax Filing
+        Compliancebro: Your AI-Driven Partner for Online Income Tax Filing
       </h2>
       <p className="text-gray-700 text-lg mb-2">
         We simplify your e-filing journey with powerful automation and human expertise.
       </p>
       <p className="text-gray-900 font-semibold text-lg mb-10">
-        Taxbuddy is your ideal partner for assisted{" "}
+        Compliancebro is your ideal partner for assisted{" "}
         <span className="text-[#007BFF] underline cursor-pointer">
           Income Tax Filing
         </span>{" "}
@@ -54,7 +54,7 @@ const FeaturesSection = () => {
             Secure Online ITR Filing Platform
           </h3>
           <p className="text-[#0A4655] text-[15px] leading-relaxed text-center">
-            Your data is safe with us. TaxBuddy’s secure e-tax filing services
+            Your data is safe with us. Compliancebro secure e-tax filing services
             use advanced encryption to keep your personal and financial
             information private.
           </p>
@@ -84,7 +84,7 @@ const FeaturesSection = () => {
           Take Control of Your Taxes
         </p>
         <p className="text-gray-900 mb-6 text-[16px]">
-          Join lakhs of Indians using TaxBuddy—India’s most secure and
+          Join lakhs of Indians using Compliancebro—India’s most secure and
           easy-to-use income tax e-filing website for individuals and businesses.
         </p>
         <button className="bg-[#00A6C4] hover:bg-[#0DC0D6] text-white font-semibold rounded-md px-8 py-3 transition">

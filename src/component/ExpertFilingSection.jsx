@@ -7,7 +7,7 @@ const ExpertFilingSection = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center gap-20 px-6 sm:px-10 md:px-20 lg:px-42 py-26 text-center lg:text-left">
         {/* Image */}
         <img
-          src="https://static.wixstatic.com/media/5ef7f2_476c74792dc040d7a802f4a223059b7d~mv2.jpg/v1/fill/w_710,h_850,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Rajkumar-Rao3-2.jpg"
+          src="Wavy_Tech-03_Single-12.jpg"
           alt="Tax Expert"
           className="w-[200px] sm:w-[260px] md:w-[320px] lg:w-[380px] mx-auto lg:mx-0"
         />
@@ -39,7 +39,7 @@ const ExpertFilingSection = () => {
       {/* === Bottom Section === */}
       <div className="bg-[#F9F9F9] py-20 px-6 sm:px-10 md:px-16 lg:px-48 text-center">
         <h2 className="text-2xl sm:text-3xl font-extrabold mb-10 text-black">
-          Need More Than Just Filing? TaxBuddy’s Got You Covered
+          Need More Than Just Filing? Compliancebro Got You Covered
         </h2>
 
         {/* Two Cards */}
@@ -120,7 +120,7 @@ const ExpertFilingSection = () => {
                 </p>
                 <p className="mt-1">
                   Get expert guidance on PF, ESI, PAN, Shop Act, and FSSAI
-                  registrations — all supported by TaxBuddy’s trusted online
+                  registrations — all supported by Compliancebro trusted online
                   income tax services for entrepreneurs.
                 </p>
               </li>

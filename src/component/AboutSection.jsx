@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section className="bg-[#E6DCF3] text-[#0A4655] px-6 sm:px-10 md:px-16 lg:px-32 xl:px-48 py-16 md:py-20 relative overflow-hidden">
+    <section className="bg-[#95d0f0] text-[#0A4655] px-6 sm:px-10 md:px-16 lg:px-32 xl:px-48 py-16 md:py-20 relative overflow-hidden">
       {/* === Top Stats Row === */}
       <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-16 md:mb-20 gap-10 text-center md:text-left">
         {/* Users */}
@@ -13,7 +13,7 @@ const AboutSection = () => {
             <h2 className="text-3xl sm:text-4xl font-bold">13,00,000</h2>
           </div>
           <p className="text-gray-700 mt-2 text-sm sm:text-base">
-            Users from 2600 towns trust TaxBuddy
+            Users from 2600 towns trust Compliancebro
           </p>
         </div>
 
@@ -25,7 +25,7 @@ const AboutSection = () => {
             <h2 className="text-3xl sm:text-4xl font-bold">94%</h2>
           </div>
           <p className="text-gray-700 mt-2 text-sm sm:text-base max-w-xs">
-            That’s how many 1st time users save tax with TaxBuddy
+            That’s how many 1st time users understand this easily
           </p>
         </div>
 
@@ -48,8 +48,8 @@ const AboutSection = () => {
         {/* Left: Phone Images */}
         <div className="relative flex justify-center lg:justify-start items-center lg:items-end mt-4 lg:mt-0">
           <img
-            src="https://static.wixstatic.com/media/42bffb_e3f3a806208a425796c9f96abe0ab92c~mv2.png/v1/fill/w_928,h_976,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Appscreen-with-RR.png"
-            alt="TaxBuddy App Preview"
+            src="invoice_3.jpg"
+            alt="Compliance bro App Preview"
             className="w-[260px] sm:w-[360px] md:w-[450px] lg:w-[520px] drop-shadow-lg"
           />
         </div>
@@ -61,7 +61,7 @@ const AboutSection = () => {
           </h2>
 
           <p className="text-gray-800 text-base sm:text-lg mb-8 leading-relaxed">
-            Experience fast, reliable, and secure online ITR filing with TaxBuddy.
+            Experience fast, reliable, and secure online ITR filing with ComplianceBro.
           </p>
 
           <ul className="space-y-4 mb-10 text-[15px] sm:text-[17px] text-left">

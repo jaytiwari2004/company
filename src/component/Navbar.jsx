@@ -13,12 +13,11 @@ const Navbar = () => {
         <div className="flex flex-col leading-tight">
           <h1 className="text-3xl font-bold">
             <Link to="/">
-              Complia<span className="text-blue-400">ncebro</span>
+              Compliance<span className="text-blue-400"> Bro</span>
             </Link>
           </h1>
-          <p className="text-xs tracking-wider hidden md:block">
-            SIMPLE | ACCURATE | SECURE
-          </p>
+          
+          
         </div>
 
         {/* ===== DESKTOP MENU (Only for ≥1245px) ===== */}
@@ -58,7 +57,7 @@ const Navbar = () => {
         {/* ===== Drawer Header ===== */}
         <div className="flex justify-between items-center px-6 py-4 border-b border-white/20">
           <h1 className="text-2xl font-bold">
-            Com<span className="text-blue-400">pany</span>
+            Complia<span className="text-blue-400">nce bro</span>
           </h1>
           <button onClick={() => setIsOpen(false)}>
             <X size={28} className="text-white" />

@@ -14,7 +14,7 @@ const SmartFilingSection = () => {
         </h3>
 
         <p className="text-[#0A4655] text-[17px] leading-relaxed mb-4">
-          At TaxBuddy, we combine intelligent automation with expert assistance
+          At Compliancebro, we combine intelligent automation with expert assistance
           to make income tax e filing simple, secure, and stress–free.
         </p>
         <p className="text-[#0A4655] text-[17px] leading-relaxed mb-8">
@@ -32,7 +32,7 @@ const SmartFilingSection = () => {
       {/* ===== Right Side ===== */}
       <div className="bg-[#F5FAF9] w-full lg:w-1/2 px-10 lg:px-24 py-16">
         <h2 className="text-4xl font-extrabold text-[#0A4655] mb-10 leading-tight">
-          How Assisted ITR Filing <br /> Works with TaxBuddy
+          How Assisted ITR Filing <br /> Works with Compliancebro
         </h2>
 
         {/* Steps */}

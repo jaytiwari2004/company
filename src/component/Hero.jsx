@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
 
-    <section className="mt-14 bg-[#144047] text-white px-6 sm:px-10 md:px-16 lg:px-32 xl:px-48 py-16 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
+    <section className="mt-14 bg-[#072529] text-white px-6 sm:px-10 md:px-16 lg:px-32 xl:px-48 py-16 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
       {/* ===== LEFT CONTENT ===== */}
       <div className="max-w-2xl z-10 text-center md:text-left">
         {/* Heading */}
@@ -19,7 +19,7 @@ const Hero = () => {
         {/* Google Reviews */}
         <div className="flex justify-center md:justify-start items-center space-x-2 mb-4">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png"
+            src="https://cdn2.hubspot.net/hubfs/53/image8-2.jpg"
             alt="Google"
             className="w-5 h-5 sm:w-6 sm:h-6"
           />
@@ -36,7 +36,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-4 sm:gap-6 items-center md:items-start justify-center md:justify-start">
           <div className="border border-white rounded-2xl px-6 sm:px-8 py-4 max-w-md w-full sm:w-auto">
             <p className="font-semibold text-white mb-2 text-center md:text-left">
-              Self-File With TaxBuddy AI
+              Self-File With Compliancebro AI
             </p>
             <button className="bg-[#00A6C4] hover:bg-[#0DC0D6] text-white font-semibold rounded-lg px-5 sm:px-6 py-2 transition w-full sm:w-auto">
               Start Self Filing
@@ -58,7 +58,7 @@ const Hero = () => {
       <div className="relative mt-12 md:mt-0 flex justify-center md:justify-end md:-ml-10 lg:-ml-20 xl:-ml-24">
         {/* Man Image */}
         <img
-          src="https://static.wixstatic.com/media/5ef7f2_282bf53eec1a4a8980b5ff7251c8e4cc~mv2.gif"
+          src="/49121.jpg"
           alt="Man"
           className="relative z-10 w-[250px] sm:w-[320px] md:w-[400px] lg:w-[460px]"
         />

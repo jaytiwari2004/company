@@ -1,46 +1,50 @@
 import React from "react";
 
-const MutualFundSection = () => {
+const PortfolioDoctor = () => {
   return (
-    <section className="bg-[#0A4655] text-white flex flex-col lg:flex-row items-center justify-center gap-10 px-6 sm:px-10 md:px-20 lg:px-32 py-20">
-      {/* Left Text */}
-      <div className="max-w-lg text-center lg:text-left w-full lg:w-1/2">
-        <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight mb-4">
-          Invest in ‘Zero–Commission’ <br /> Mutual Funds
+    <section className="bg-[#072529] text-white w-full py-20 px-6 md:px-16 lg:px-24 flex flex-col lg:flex-row items-center justify-between">
+
+      {/* LEFT TEXT SECTION */}
+      <div className="max-w-xl w-full">
+        <h1 className="text-4xl md:text-5xl font-bold leading-snug mb-4">
+          TaxBuddy Portfolio <br /> Doctor
         </h1>
 
-        <h2 className="text-base sm:text-lg font-medium mb-6">
-          Compare Funds. Understand Risk. Invest Smarter.
-        </h2>
-
-        <p className="text-[15px] text-[#E0EAEA] leading-relaxed mb-8">
-          Use our advanced rating system to evaluate top–performing mutual
-          funds. Track historical returns, assess risk levels, and project
-          future performance — all within a secure, intuitive dashboard.
+        <p className="text-lg md:text-xl text-gray-300 mb-6">
+          Get Your Investment Portfolio Analyzed in Minutes
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+        <p className="text-[15px] text-gray-300 leading-relaxed mb-10">
+          Upload your CAS report and let our AI-driven engine analyze your
+          current holdings. Instantly discover top performers, laggards, and
+          personalized insights to optimize your investments for better tax
+          efficiency.
+        </p>
+
+        {/* INPUT + BUTTON */}
+        <div className="flex flex-col sm:flex-row items-center gap-4">
           <input
             type="text"
             placeholder="Enter your mobile number"
-            className="w-full sm:w-[280px] px-4 py-3 rounded-md text-[#333333] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00A6C4]"
+            className="w-full sm:w-[380px] px-5 py-3 rounded-md text-black focus:outline-none"
           />
-          <button className="bg-[#00A6C4] hover:bg-[#0DC0D6] text-white font-semibold rounded-md px-6 py-3 w-full sm:w-auto transition">
-            Start Investing
+          <button className="bg-[#00A6C4] hover:bg-[#0DC0D6] text-white font-medium px-6 py-3 rounded-md">
+            Analyze My Portfolio
           </button>
         </div>
       </div>
 
-      {/* Right Image */}
-      <div className="flex justify-center lg:justify-end w-full lg:w-1/2">
+      {/* IMAGE SECTION */}
+      <div className="mt-12 lg:mt-0 flex justify-center lg:justify-end w-full">
         <img
-          src="https://static.wixstatic.com/media/5ef7f2_8b9e6f6c62b744c3a8e45e4cf6e4f1de~mv2.png/v1/fill/w_800,h_700,al_c,lg_1,q_90,enc_avif,quality_auto/Zero-Commission.png"
-          alt="Zero Commission Mutual Funds"
-          className="w-[220px] sm:w-[280px] md:w-[340px] lg:w-[380px] object-contain"
+          src="49135.jpg"
+          alt="Portfolio Doctor"
+          className="w-[260px] sm:w-[320px] md:w-[380px] lg:w-[430px]"
         />
       </div>
+
     </section>
   );
 };
 
-export default MutualFundSection;
+export default PortfolioDoctor;

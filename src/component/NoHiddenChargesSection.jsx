@@ -2,12 +2,12 @@ import React from "react";
 
 const NoHiddenChargesSection = () => {
   return (
-    <section className="relative overflow-hidden bg-[#182c30] text-white flex flex-col lg:flex-row items-center justify-between px-10 lg:px-48 py-20">
+    <section className="relative overflow-hidden bg-[#072529] text-white flex flex-col lg:flex-row items-center justify-between px-10 lg:px-48 py-20">
       {/* === LEFT BLUR GRADIENT === */}
-      <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#182c30] via-[#182c30]/80 to-transparent blur-3xl pointer-events-none"></div>
+      <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#072529] via-[#072529]/80 to-transparent blur-3xl pointer-events-none"></div>
 
       {/* === RIGHT BLUR GRADIENT === */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#182c30] via-[#182c30]/80 to-transparent blur-3xl pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#072529] via-[#072529]/80 to-transparent blur-3xl pointer-events-none"></div>
 
       {/* ===== Left Text Section ===== */}
       <div className="max-w-xl z-10">
@@ -50,8 +50,8 @@ const NoHiddenChargesSection = () => {
         <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#0A4655]/50 to-[#0A4655]/80 blur-2xl rounded-full scale-125"></div>
 
         <img
-          src="https://static.wixstatic.com/media/5ef7f2_d269408ebe0440c8ad2b5483b4698fb0~mv2.jpg/v1/fill/w_702,h_581,al_c,lg_1,q_85,enc_avif,quality_auto/carousel.jpg"
-          alt="TaxBuddy App Preview"
+          src="49135.jpg"
+          alt="Compliancebro App Preview"
           className="relative w-[380px] md:w-[420px] lg:w-[480px] rounded-lg shadow-2xl"
         />
       </div>
