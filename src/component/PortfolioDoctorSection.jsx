@@ -7,7 +7,7 @@ const PortfolioDoctor = () => {
       {/* LEFT TEXT SECTION */}
       <div className="max-w-xl w-full">
         <h1 className="text-4xl md:text-5xl font-bold leading-snug mb-4">
-          TaxBuddy Portfolio <br /> Doctor
+          Compliance Bro Portfolio <br /> Doctor
         </h1>
 
         <p className="text-lg md:text-xl text-gray-300 mb-6">
