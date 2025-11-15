@@ -2,41 +2,29 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Signup = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+      const res = await axios.post("http://localhost:5000/api/auth/register", {
+        name,
         email,
         password,
       });
 
-      setMessage("Login Successful ✔");
+      setMessage("Account Created Successfully ✔");
 
-      // Save token
-      localStorage.setItem("token", res.data.token);
-
-      // Notify Navbar
-      window.dispatchEvent(new Event("storage"));
-
-      // Redirect
-      setTimeout(() => navigate("/"), 1200);
+      setTimeout(() => navigate("/login"), 1200);
     } catch (err) {
-      setMessage(err.response?.data?.msg || "Login Failed ❌");
+      setMessage(err.response?.data?.msg || "Signup Failed ❌");
     }
-  };
-
-  // Google Sign-in Handler (Frontend only for now)
-  const handleGoogleLogin = () => {
-    alert("Google Login Coming Soon 🌐");
-    // Later: redirect to backend Google OAuth endpoint
-    // window.location.href = "http://localhost:5000/api/auth/google";
   };
 
   return (
@@ -49,7 +37,7 @@ const Login = () => {
         </h1>
 
         <h2 className="text-2xl font-semibold text-center mb-4 text-gray-700">
-          Login to Your Account
+          Create Your Account
         </h2>
 
         {/* Message */}
@@ -59,9 +47,25 @@ const Login = () => {
           </p>
         )}
 
-        {/* Login Form */}
-        <form onSubmit={handleLogin} className="space-y-5">
-          
+        {/* Signup Form */}
+        <form onSubmit={handleSignup} className="space-y-5">
+
+          {/* Name */}
+          <div>
+            <label className="block font-medium mb-1 text-gray-700">
+              Full Name
+            </label>
+            <input
+              type="text"
+              className="w-full border rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-teal-500"
+              placeholder="Enter your name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </div>
+
+          {/* Email */}
           <div>
             <label className="block font-medium mb-1 text-gray-700">
               Email Address
@@ -76,6 +80,7 @@ const Login = () => {
             />
           </div>
 
+          {/* Password */}
           <div>
             <label className="block font-medium mb-1 text-gray-700">
               Password
@@ -83,43 +88,28 @@ const Login = () => {
             <input
               type="password"
               className="w-full border rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-teal-500"
-              placeholder="Enter your password"
+              placeholder="Create a password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
 
-          {/* Login Button */}
+          {/* Signup Button */}
           <button
             type="submit"
             className="w-full bg-teal-500 text-white font-semibold py-2 rounded-lg hover:bg-teal-400 transition-all"
           >
-            Login →
+            Sign Up →
           </button>
         </form>
 
-        {/* Google Sign-in */}
-        <button
-          onClick={handleGoogleLogin}
-          className="mt-4 w-full flex items-center justify-center gap-3 border border-gray-300 py-2 rounded-lg hover:bg-gray-100 transition"
-        >
-          <img
-            src="https://png.pngtree.com/png-clipart/20230916/original/pngtree-google-logo-vector-png-image_12256710.png"
-            alt="Google"
-            className="w-6 h-6"
-          />
-          <span className="font-medium text-gray-700">Sign in with Google</span>
-        </button>
-
-        {/* Divider */}
         <div className="text-center my-4 text-gray-500">OR</div>
 
-        {/* Sign Up Link */}
         <p className="text-center text-gray-700">
-          Don't have an account?{" "}
-          <Link to="/signup" className="text-teal-500 font-semibold hover:underline">
-            Create one
+          Already have an account?{" "}
+          <Link to="/login" className="text-teal-500 font-semibold hover:underline">
+            Login here
           </Link>
         </p>
       </div>
@@ -127,4 +117,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

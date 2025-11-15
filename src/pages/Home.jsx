@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 import Hero from "../component/Hero";
 import AboutSection from "../component/AboutSection";
 import FeaturesSection from "../component/FeaturesSection";
@@ -13,8 +15,17 @@ import AwardsSection from "../component/AwardsSection";
 import FAQSection from "../component/FAQSection";
 import Footer from "../component/Footer";
 
-
 const Home = () => {
+  const navigate = useNavigate();
+
+  // 🔐 Redirect if not logged in
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login"); // redirect user to login page
+    }
+  }, [navigate]);
+
   return (
     <div>
       <Hero />
@@ -30,11 +41,6 @@ const Home = () => {
       <AwardsSection />
       <FAQSection />
       <Footer />
-      
-      
-      
-      
-     
     </div>
   );
 };
