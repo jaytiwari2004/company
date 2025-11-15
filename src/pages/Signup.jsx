@@ -13,7 +13,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", {
+      const res = await axios.post("http://localhost:5000/api/auth/signup", {
         name,
         email,
         password,
@@ -21,44 +21,44 @@ const Signup = () => {
 
       setMessage("Account Created Successfully ✔");
 
-      setTimeout(() => navigate("/login"), 1200);
+      setTimeout(() => navigate("/login"), 1500);
     } catch (err) {
       setMessage(err.response?.data?.msg || "Signup Failed ❌");
     }
   };
 
   return (
-    <div className="min-h-screen bg-[#0e3940] flex items-center justify-center px-4">
-      <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md">
-        
+    <div className="min-h-screen bg-[#0e3940] flex items-center justify-center px-4 sm:px-6 md:px-8 py-10">
+      <div className="bg-white shadow-xl rounded-2xl p-6 sm:p-8 w-full max-w-sm sm:max-w-md">
+
         {/* Logo */}
-        <h1 className="text-3xl font-bold text-center mb-6 text-[#144047]">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-[#144047]">
           Compliance<span className="text-teal-500">Bro</span>
         </h1>
 
-        <h2 className="text-2xl font-semibold text-center mb-4 text-gray-700">
+        <h2 className="text-xl sm:text-2xl font-semibold text-center mb-5 text-gray-700">
           Create Your Account
         </h2>
 
         {/* Message */}
         {message && (
-          <p className="text-center mb-4 font-semibold text-[#144047]">
+          <p className="text-center mb-4 font-semibold text-[#144047] text-sm sm:text-base">
             {message}
           </p>
         )}
 
         {/* Signup Form */}
-        <form onSubmit={handleSignup} className="space-y-5">
+        <form onSubmit={handleSignup} className="space-y-4 sm:space-y-5">
 
           {/* Name */}
           <div>
-            <label className="block font-medium mb-1 text-gray-700">
+            <label className="block font-medium mb-1 text-gray-700 text-sm sm:text-base">
               Full Name
             </label>
             <input
               type="text"
-              className="w-full border rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-teal-500"
-              placeholder="Enter your name"
+              className="w-full border rounded-md px-3 sm:px-4 py-2 sm:py-3 outline-none focus:ring-2 focus:ring-teal-500"
+              placeholder="Enter your full name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
@@ -67,12 +67,12 @@ const Signup = () => {
 
           {/* Email */}
           <div>
-            <label className="block font-medium mb-1 text-gray-700">
+            <label className="block font-medium mb-1 text-gray-700 text-sm sm:text-base">
               Email Address
             </label>
             <input
               type="email"
-              className="w-full border rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full border rounded-md px-3 sm:px-4 py-2 sm:py-3 outline-none focus:ring-2 focus:ring-teal-500"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -82,12 +82,12 @@ const Signup = () => {
 
           {/* Password */}
           <div>
-            <label className="block font-medium mb-1 text-gray-700">
+            <label className="block font-medium mb-1 text-gray-700 text-sm sm:text-base">
               Password
             </label>
             <input
               type="password"
-              className="w-full border rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full border rounded-md px-3 sm:px-4 py-2 sm:py-3 outline-none focus:ring-2 focus:ring-teal-500"
               placeholder="Create a password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -98,18 +98,22 @@ const Signup = () => {
           {/* Signup Button */}
           <button
             type="submit"
-            className="w-full bg-teal-500 text-white font-semibold py-2 rounded-lg hover:bg-teal-400 transition-all"
+            className="w-full bg-teal-500 text-white font-semibold py-2 sm:py-3 rounded-lg hover:bg-teal-400 transition-all text-base"
           >
             Sign Up →
           </button>
         </form>
 
-        <div className="text-center my-4 text-gray-500">OR</div>
+        {/* Divider */}
+        <div className="text-center my-4 text-gray-500 text-sm sm:text-base">
+          OR
+        </div>
 
-        <p className="text-center text-gray-700">
+        {/* Already have account */}
+        <p className="text-center text-gray-700 text-sm sm:text-base">
           Already have an account?{" "}
           <Link to="/login" className="text-teal-500 font-semibold hover:underline">
-            Login here
+            Login Now
           </Link>
         </p>
       </div>
