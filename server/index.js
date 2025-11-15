@@ -7,19 +7,28 @@ import mainRoutes from "./routes/routes.js";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+// ✅ Allow only your frontend URL
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL,   // <--- allowed frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
-// all API routes
+// All API routes
 app.use("/api", mainRoutes);
 
-// connect mongodb
+// Connect MongoDB
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log("DB Error:", err));
 
-// start server
+// Start server
 app.listen(5000, () => {
   console.log("Server running on port 5000");
 });
