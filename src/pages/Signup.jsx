@@ -13,7 +13,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("https://company00.onrender.com/api/auth/signup", {
+      const res = await axios.post("https://company00.onrender.com/api/auth/register", {
         name,
         email,
         password,
