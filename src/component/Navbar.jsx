@@ -1,131 +1,150 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import React, { useState } from "react";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  // Live update login state
-  useEffect(() => {
-    const checkLogin = () => {
-      const token = localStorage.getItem("token");
-      setIsLoggedIn(!!token);
-    };
-
-    checkLogin();
-    window.addEventListener("storage", checkLogin);
-    return () => window.removeEventListener("storage", checkLogin);
-  }, []);
-
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    window.dispatchEvent(new Event("storage"));
-    setIsOpen(false);
-    window.location.href = "/login";
-  };
+  const [openMenu, setOpenMenu] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(false);
 
   return (
-    <>
-      {/* MAIN NAVBAR */}
-      <nav className="fixed z-50 top-0 left-0 right-0 bg-[#144047] text-white px-6 md:px-12 lg:px-48 py-4 flex justify-between items-center shadow-md">
+    <div className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
+      {/* NAVBAR TOP */}
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 md:py-4">
         
         {/* LOGO */}
-        <div className="flex flex-col leading-tight">
-          <h1 className="text-3xl font-bold">
-            <Link to="/">
-              Compliance<span className="text-blue-400"> Bro</span>
-            </Link>
-          </h1>
-        </div>
+        <h1 className="text-2xl font-bold text-[#0C3C46]">
+          Compliance<span className="text-[#00A7B6]">Bro</span>
+        </h1>
 
-        {/* DESKTOP MENU */}
-        <ul className="hidden xl:flex space-x-8 text-lg font-medium">
-          <li><Link to="/">Services</Link></li>
-          <li><Link to="/">Pricing</Link></li>
-          <li><Link to="/">Resources</Link></li>
-          <li><Link to="/">Investments</Link></li>
-          <li><Link to="/">Corporate tie-up</Link></li>
-        </ul>
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-8 font-medium text-gray-700">
+          <button className="hover:text-red-600 hover:underline underline-offset-4">Startup India</button>
 
-        {/* DESKTOP AUTH BUTTONS */}
-        <div className="hidden xl:flex items-center gap-4">
-          {!isLoggedIn ? (
-            <Link
-              to="/login"
-              className="bg-teal-500 hover:bg-teal-400 px-5 py-2 rounded-md"
-            >
-              Login →
-            </Link>
-          ) : (
-            <button
-              onClick={handleLogout}
-              className="bg-red-500 hover:bg-red-400 px-5 py-2 rounded-md"
-            >
-              Logout
+          {/* REGISTRATION DROPDOWN */}
+          <div
+            className="relative"
+            onMouseEnter={() => setOpenDropdown(true)}
+            onMouseLeave={() => setOpenDropdown(false)}
+          >
+            <button className="hover:text-red-600 hover:underline underline-offset-4">
+              Registration
             </button>
-          )}
-        </div>
 
-        {/* MOBILE MENU */}
-        <button className="xl:hidden" onClick={() => setIsOpen(true)}>
-          <Menu size={28} />
-        </button>
-      </nav>
+            {/* MEGA MENU */}
+            {openDropdown && (
+              <div className="absolute left-0 top-full mt-4 bg-white shadow-xl border border-gray-200 p-6 grid grid-cols-4 gap-10 w-[900px] z-50 rounded-lg">
+                
+                {/* COLUMN 1 */}
+                <div>
+                  <h3 className="font-bold text-gray-800">Company Registration</h3>
+                  <ul className="space-y-1 text-sm text-gray-600 mt-2">
+                    <li>Proprietorship Registration</li>
+                    <li>Partnership Registration</li>
+                    <li>Limited Liability Partnership</li>
+                    <li>One Person Company Registration</li>
+                    <li>Private Limited Company Registration</li>
+                    <li>Public Limited Company Registration</li>
+                  </ul>
 
-      {/* SIDE DRAWER */}
-      <div
-        className={`fixed top-0 right-0 h-screen w-full sm:w-80 bg-[#144047] text-white transform ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        } transition duration-300 z-50`}
-      >
-        <div className="flex justify-between items-center px-6 py-4 border-b border-white/20">
-          <h1 className="text-2xl font-bold">
-            Complia<span className="text-blue-400">nce bro</span>
-          </h1>
-          <button onClick={() => setIsOpen(false)}>
-            <X size={28} />
+                  <h3 className="font-bold text-gray-800 mt-4">Special Entity Registration</h3>
+                  <ul className="space-y-1 text-sm text-gray-600 mt-2">
+                    <li>Section-8 Company Registration</li>
+                    <li>Trust Registration</li>
+                    <li>Society Registration</li>
+                  </ul>
+                </div>
+
+                {/* COLUMN 2 */}
+                <div>
+                  <h3 className="font-bold text-gray-800">Industry Specific Registration</h3>
+                  <ul className="space-y-1 text-sm text-gray-600 mt-2">
+                    <li>FSSAI Registration</li>
+                    <li>Import Export Code Registration</li>
+                  </ul>
+
+                  <h3 className="font-bold text-gray-800 mt-4">Tax Registration</h3>
+                  <ul className="space-y-1 text-sm text-gray-600 mt-2">
+                    <li>GST Registration</li>
+                    <li>PF ESI Registration</li>
+                  </ul>
+                </div>
+
+                {/* COLUMN 3 */}
+                <div>
+                  <h3 className="font-bold text-gray-800">Intellectual Property Rights</h3>
+                  <ul className="space-y-1 text-sm text-gray-600 mt-2">
+                    <li>Trademark Registration</li>
+                    <li>Copyright</li>
+                  </ul>
+
+                  <h3 className="font-bold text-gray-800 mt-4">Certification</h3>
+                  <ul className="space-y-1 text-sm text-gray-600 mt-2">
+                    <li>ISO Certification</li>
+                  </ul>
+                </div>
+
+                {/* COLUMN 4 */}
+                <div>
+                  <h3 className="font-bold text-gray-800">Things to do After Incorporation</h3>
+                  <ul className="space-y-1 text-sm text-gray-600 mt-2">
+                    <li>Stage-1: Basic Necessity</li>
+                    <li>Stage-2: Industry Specific Necessity</li>
+                    <li>Stage-3: Go Live & Get Funding</li>
+                  </ul>
+                </div>
+
+              </div>
+            )}
+          </div>
+
+          <button className="hover:text-red-600 hover:underline underline-offset-4">Compliance</button>
+          <button className="hover:text-red-600 hover:underline underline-offset-4">Go Online</button>
+          <button className="hover:text-red-600 hover:underline underline-offset-4">Tutorials</button>
+          <button className="hover:text-red-600 hover:underline underline-offset-4">Downloads</button>
+          <button className="hover:text-red-600 hover:underline underline-offset-4">Packages</button>
+
+          {/* LOGIN BUTTON */}
+          <button className="bg-red-600 text-white px-5 py-2 rounded-md font-semibold hover:bg-red-700">
+            Login/Sign Up
           </button>
         </div>
 
-        {/* Drawer Links */}
-        <ul className="flex flex-col text-lg font-medium mt-6 space-y-4 px-6">
-          <li><Link to="/" onClick={() => setIsOpen(false)}>Services</Link></li>
-          <li><Link to="/" onClick={() => setIsOpen(false)}>Pricing</Link></li>
-          <li><Link to="/" onClick={() => setIsOpen(false)}>Resources</Link></li>
-          <li><Link to="/" onClick={() => setIsOpen(false)}>Investments</Link></li>
-          <li><Link to="/" onClick={() => setIsOpen(false)}>Corporate tie-up</Link></li>
-        </ul>
-
-        {/* DRAWER AUTH BUTTON */}
-        <div className="mt-8 px-6 flex flex-col space-y-3">
-          {!isLoggedIn ? (
-            <Link
-              to="/login"
-              onClick={() => setIsOpen(false)}
-              className="bg-teal-500 py-2 rounded-md text-center"
-            >
-              Login →
-            </Link>
-          ) : (
-            <button
-              onClick={handleLogout}
-              className="bg-red-500 py-2 rounded-md text-center"
-            >
-              Logout
-            </button>
-          )}
-        </div>
+        {/* MOBILE MENU BUTTON */}
+        <button
+          className="md:hidden text-3xl"
+          onClick={() => setOpenMenu(!openMenu)}
+        >
+          ☰
+        </button>
       </div>
 
-      {/* OVERLAY */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
-          onClick={() => setIsOpen(false)}
-        />
+      {/* MOBILE DROPDOWN MENU */}
+      {openMenu && (
+        <div className="md:hidden bg-white px-4 py-4 border-t">
+          <ul className="space-y-3 text-gray-700 font-medium">
+
+            <li>Startup India</li>
+
+            <li className="font-bold mt-3">Registration</li>
+            <ul className="ml-4 text-sm space-y-1">
+              <li>Proprietorship Registration</li>
+              <li>Partnership Registration</li>
+              <li>LLP Registration</li>
+              <li>One Person Company</li>
+              <li>Private Limited Company</li>
+            </ul>
+
+            <li>Compliance</li>
+            <li>Go Online</li>
+            <li>Tutorials</li>
+            <li>Downloads</li>
+            <li>Packages</li>
+
+            <button className="bg-red-600 w-full text-white py-2 rounded-md font-semibold mt-3">
+              Login / Sign Up
+            </button>
+          </ul>
+        </div>
       )}
-    </>
+    </div>
   );
 };
 
