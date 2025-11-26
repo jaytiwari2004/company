@@ -30,7 +30,7 @@ const Navbar = () => {
 
             {/* MEGA MENU */}
             {openDropdown && (
-              <div className="absolute left-0 top-full mt-4 bg-white shadow-xl border border-gray-200 p-6 grid grid-cols-4 gap-10 w-[900px] z-50 rounded-lg">
+              <div className="absolute left-0  bg-white shadow-xl border border-gray-200 p-6 grid grid-cols-4 gap-10 w-[900px] z-50 rounded-lg">
                 
                 {/* COLUMN 1 */}
                 <div>
@@ -100,11 +100,7 @@ const Navbar = () => {
           <button className="hover:text-red-600 hover:underline underline-offset-4">Tutorials</button>
           <button className="hover:text-red-600 hover:underline underline-offset-4">Downloads</button>
           <button className="hover:text-red-600 hover:underline underline-offset-4">Packages</button>
-
-          {/* LOGIN BUTTON */}
-          <button className="bg-red-600 text-white px-5 py-2 rounded-md font-semibold hover:bg-red-700">
-            Login/Sign Up
-          </button>
+         <button className="hover:text-red-600 hover:underline underline-offset-4">Contact us</button>
         </div>
 
         {/* MOBILE MENU BUTTON */}
