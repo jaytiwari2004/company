@@ -22,7 +22,7 @@ const Home = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
-      navigate("/login"); // redirect user to login page
+      navigate(""); // redirect user to login page
     }
   }, [navigate]);
 

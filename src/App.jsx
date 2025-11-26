@@ -2,9 +2,9 @@ import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./component/Navbar.jsx";
 import Home from "./pages/Home";
-import Login from "./pages/Login.jsx";
+
 import Dashboard from "./pages/Dashboard.jsx";
-import Signup from "./pages/Signup.jsx";
+
 import FloatingHelpButton from "./component/FloatingHelpButton.jsx";
 
 function App() {
@@ -30,8 +30,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+       
       </Routes>
     </>
   );
